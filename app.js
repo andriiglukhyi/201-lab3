@@ -53,3 +53,39 @@ alert('You are correct. I want to bo a developer');
 if (goal.toLowerCase() === 'no' || goal.toLowerCase() === 'n') {
 alert('Wrong answer');
 }
+var number=prompt('how old am i?');
+console.log('age', number);
+var counter = 1;
+
+while(number != 26) {
+  number = parseInt(prompt('please enter a number. How old am I?'));
+  if(number<26) {
+    alert('Thanks. But I am older than' + number);
+    counter++
+  } else if (number> 26) {
+    alert('Sorry. Not so old.');
+    conter++
+  } else if (number === NaN || number === null){
+    alert('please enter a number');
+    counter++
+  } else if (counter === 4){
+    alert ('we are done with this question. Sorry. Maybe next time')
+  }
+}
+
+var country = ['ukraine','italy','german','france','russia','usa'];
+var answer = prompt("Where I used to live before?")
+var counter = 1;
+var flag
+
+for (var i=0; i < country.length; i++) {
+  console.log('each country', country[i]);
+  if(answer.toLowerCase() === 'stuff[i]'); {
+    alert('U right');
+    flag = true;
+    break
+  }
+}
+if (!flag) {
+  alert('Wrong answer')
+}

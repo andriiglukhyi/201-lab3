@@ -31,6 +31,8 @@ main p {
   position:sticky;
 }
 
-* {
-  outline:1px orange;
+.horiz {
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
 }
