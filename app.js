@@ -1,8 +1,11 @@
 'use strict';
 
+var useName = prompt('Hello what is your name?');
+console.log('user name',useName);
+
 var countAnsw = 0;
 
-var question1= prompt('Hello jobseeker I are have a couple question for you! You should answer Yes or No. Ok? ');
+var question1= prompt('Hello '+ useName + ' I are have a couple question for you! You should answer Yes or No. Ok? ');
 console.log('1st question', question1);
 
 if (question1.toLowerCase() === 'yes' || question1.toLowerCase() === 'y' ) {
@@ -37,7 +40,7 @@ if (apart.toUpperCase() === 'NO'|| apart.toUpperCase() === 'N') {
   alert ('Wrong answer');
 }
 
-var expir= prompt('Do you I have a job expirience');
+var expir= prompt('Do you thing I have a job expirience');
 console.log('expirience', expir);
 
 if (expir.toLowerCase() === 'yes' || expir.toLowerCase() === 'y') {
@@ -59,12 +62,12 @@ countAnsw++
 if (goal.toLowerCase() === 'no' || goal.toLowerCase() === 'n') {
 alert('Wrong answer');
 }
-var number=prompt('how old am i?');
-console.log('age', number);
-var counter = 0;
 
+var number;
+var counter = 0;
 while(number != 26) {
-  number = parseInt(prompt('How old am I?'));
+  number = (prompt('how old am i?'));
+  console.log('age', number)
   if(number<26) {
     alert('Thanks. But I am older than' + number);
     counter++
@@ -73,41 +76,43 @@ while(number != 26) {
     counter++
   } else if (number === NaN || number === null){
     alert('please enter a number');
-  } else if (number === 26) {
-    alert('You are right')
-    countAnsw++
+    counter++
   }
-  if (counter === 4){
-    alert ('we are done with this question. Sorry. Maybe next time')
-    break
-  }
+if (number === 26) {
+alert('You are right');
+countAnsw++
+break;
 }
-  var country = ['ukraine','italy','german','france','russia','usa'];
-  var flag;
-  var count=0;
-  while(count<7) {
-    var answer = prompt("Where I used to live before?");
-    for (var i=0; i < country.length; i++) {
-      console.log('country', country[i]);
+if (counter === 4){
+alert ('we are done with this question. Sorry. Maybe next time')
+break;
+}
+}
 
-      if(answer.toLowerCase() === country[i]) {
-        alert('U right');
-        countAnsw++
-        flag = true;
-        count++
-        break;
-      }
-    if (!flag) {
-      alert('Wrong answer');
+  var country = ['ukraine','italy'];
+  var count=0;
+  var flag
+
+  while (count<7) {
+    var answer = prompt("Where I used to live before?");
+    console.log('country', answer);
+    for (var i=0; i < country.length; i++) {
+    if (answer === country[i]) {
+      alert('Correct');
+      flag = true;
+      countAnsw++
+    } else if (!flag) {
+      alert('Incorrect');
       count++
       break;
+      }
     }
     if (count === 6) {
       alert('next time')
-    }
+      break;
+      }
+   }
 
-  }
 
-  }
 
-  alert('You made ' + countAnsw + ' right answers');
+  alert(useName +' You made ' + countAnsw + ' right answers');
