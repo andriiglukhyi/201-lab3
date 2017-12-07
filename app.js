@@ -63,6 +63,8 @@ if (goal.toLowerCase() === 'no' || goal.toLowerCase() === 'n') {
 alert('Wrong answer');
 }
 
+//question 6
+
 var number;
 var counter = 0;
 while(number != 26) {
@@ -89,6 +91,7 @@ break;
 }
 }
 
+//qyestion 7
   var country = ['ukraine','italy'];
   var count=0;
   var flag
@@ -97,7 +100,7 @@ break;
     var answer = prompt("Where I used to live before?");
     console.log('country', answer);
     for (var i=0; i < country.length; i++) {
-    if (answer === country[i]) {
+    if (answer.toLowerCase() === country[i]) {
       alert('Correct');
       flag = true;
       countAnsw++
@@ -113,6 +116,6 @@ break;
       }
    }
 
-
+//global counter
 
   alert(useName +' You made ' + countAnsw + ' right answers');
