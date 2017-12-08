@@ -133,9 +133,6 @@ var countAnsw = 0;
 
 }
 
-
-
-
 //global counter
 
   alert(useName +' You made ' + countAnsw + ' right answers');
